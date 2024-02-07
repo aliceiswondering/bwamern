@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 export default function Button (props) {
@@ -12,6 +12,7 @@ export default function Button (props) {
     if(props.hasShadow) className.push("btn-shadow")
 
     const onClick = () => {
+        alert('Button is click');
         if(props.onClick) props.onClick()
     }
 
@@ -47,6 +48,7 @@ export default function Button (props) {
                 <Link to={props.href} 
                     className={className.join(" ")} 
                     style={props.style}
+                    
                     onClick={onClick}
                 >
                     {props.children}                                           
@@ -54,7 +56,7 @@ export default function Button (props) {
             )
         }
     }
-    return <button className={className.join(" ")} 
+    return <button onClick={onClick} className={className.join(" ")} 
             style={props.style}
         >{props.children}</button>
 }
