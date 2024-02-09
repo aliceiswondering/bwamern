@@ -12,7 +12,6 @@ export default function Button (props) {
     if(props.hasShadow) className.push("btn-shadow")
 
     const onClick = () => {
-        alert('Button is click');
         if(props.onClick) props.onClick()
     }
 
