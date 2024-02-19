@@ -1,15 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.454fccd2.css",
-    "main.js": "/static/js/main.0f7b00b6.js",
-    "static/js/592.eb086eb5.chunk.js": "/static/js/592.eb086eb5.chunk.js",
+    "main.css": "/static/css/main.ac914842.css",
+    "main.js": "/static/js/main.b5dcf75c.js",
+    "static/js/592.f2d18369.chunk.js": "/static/js/592.f2d18369.chunk.js",
+    "static/media/img-hero.jpg": "/static/media/img-hero.d18e054899d6fa2cc467.jpg",
+    "static/media/il_success.jpg": "/static/media/il_success.7854157201ca258cb802.jpg",
+    "static/media/img-frame-hero.jpg": "/static/media/img-frame-hero.5afd86c31c686d3148d9.jpg",
+    "static/media/testimonial-landingpages-frame.jpg": "/static/media/testimonial-landingpages-frame.75b5114a186bc23242a0.jpg",
+    "static/media/logo-bca.jpg": "/static/media/logo-bca.4436cedce9c224f1c5ad.jpg",
+    "static/media/logo-mandiri.jpg": "/static/media/logo-mandiri.a8a7278e333762167922.jpg",
+    "static/media/icon-treasure.svg": "/static/media/icon-treasure.e9b05dfcf3306d37d50f945a8afccc01.svg",
+    "static/media/ic_calender.svg": "/static/media/ic_calender.c94a8627e8408ad8075b95d874de4d7c.svg",
+    "static/media/star.svg": "/static/media/star.74658408d7f176275884.svg",
+    "static/media/icon-cities.svg": "/static/media/icon-cities.c1c772feaf211624d0c27348e6f85f39.svg",
     "index.html": "/index.html",
-    "main.454fccd2.css.map": "/static/css/main.454fccd2.css.map",
-    "main.0f7b00b6.js.map": "/static/js/main.0f7b00b6.js.map",
-    "592.eb086eb5.chunk.js.map": "/static/js/592.eb086eb5.chunk.js.map"
+    "static/media/icon-traveler.svg": "/static/media/icon-traveler.f823aef1b73d19712e8b6ebbb045f354.svg",
+    "main.ac914842.css.map": "/static/css/main.ac914842.css.map",
+    "main.b5dcf75c.js.map": "/static/js/main.b5dcf75c.js.map",
+    "592.f2d18369.chunk.js.map": "/static/js/592.f2d18369.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.454fccd2.css",
-    "static/js/main.0f7b00b6.js"
+    "static/css/main.ac914842.css",
+    "static/js/main.b5dcf75c.js"
   ]
 }
