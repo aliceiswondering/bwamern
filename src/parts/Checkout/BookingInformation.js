@@ -9,26 +9,26 @@ export default function BookingInformation(props) {
     <Fade>
       <div className="container" style={{ marginBottom: 30 }}>
         <div className="row justify-content-center align-items-center">
-          <div className="col-5 border-right-py-5" style={{ paddingRight: 80 }}>
+          <div className="col-12 col-lg-5 border-lg-right py-lg-5 px-5 px-lg-0 mb-5 mb-lg-0" style={{ paddingRight: 80 }}>
             <Fade delay={300}>
               <div className="card">
                 <figure className="img-wrapper" style={{ height: 270 }}>
                   <img
-                    src={ItemDetails.imageUrls[0].url}
-                    alt={ItemDetails.name}
+                    src={`${process.env.REACT_APP_HOST}/${ItemDetails.imageId[0].imageUrl}`}
+                    alt={ItemDetails.title}
                     className="img-cover"
                   />
                 </figure>
                 <div className="row align-items-center">
-                  <div className="col">
+                  <div className="col-12 col-lg">
                     <div className="meta-wrapper">
-                      <h5>{ItemDetails.name}</h5>
+                      <h5>{ItemDetails.title}</h5>
                       <span className="text-gray-500">
                         {ItemDetails.city}, {ItemDetails.country}
                       </span>
                     </div>
                   </div>
-                  <div className="col-auto">
+                  <div className="col-12 col-lg-auto">
                     <span>
                       ${+checkout.duration * ItemDetails.price} USD
                       <span className="text-gray-500"> per </span>{" "}
@@ -40,7 +40,7 @@ export default function BookingInformation(props) {
               </div>
             </Fade>
           </div>
-          <div className="col-5 py-5" style={{ paddingLeft: 80 }}>
+          <div className="col-12 col-lg-5 py-lg-5 px-5 px-lg-0" style={{ paddingLeft: 80 }}>
             <Fade delay={600}>
               <label htmlFor="firstName">First Name</label>
               <InputText

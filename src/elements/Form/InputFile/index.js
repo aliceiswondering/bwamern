@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import propTypes from "prop-types";
 import "./index.scss";
 export default function File(props) {
+  const [FileName, setFileName] = useState("");
   const {
     value,
     placeholder,
@@ -13,6 +14,17 @@ export default function File(props) {
     inputClassName,
   } = props;
   const refInputFile = useRef(null);
+
+  const onChange = (event) => {
+    setFileName(event.target.value);
+
+    props.onChange({
+      target: {
+        name: event.target.name,
+        value: event.target.files
+      }
+    })
+  }
 
   return (
     <div className={["input-text mb-3", outerClassName].join(" ")}>
@@ -28,20 +40,20 @@ export default function File(props) {
           name={name}
           className="d-none"
           type="file"
-          value={value}
-          onChange={props.onChange}
+          value={FileName}
+          onChange={onChange}
         />
 
         <input
           onClick={() => refInputFile.current.click()}
-          defaultValue={value}
+          defaultValue={FileName}
           placeholder={placeholder}
           className={["form-control", inputClassName].join(" ")}
         />
         {append && (
-            <div className="input-group-append bg-gray-900">
-                <span className="input-group-text">{append}</span>
-            </div>
+          <div className="input-group-append bg-gray-900">
+            <span className="input-group-text">{append}</span>
+          </div>
         )}
       </div>
     </div>

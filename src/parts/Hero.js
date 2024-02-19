@@ -20,7 +20,7 @@ export default function Hero(props) {
         <Fade bottom>
             <section className="container pt-4">
                 <div className="row align-items-center">
-                    <div className="col-auto pr-5" style={{width: 530}}>
+                    <div className="col-12 col-lg-auto pr-lg-5 mb-5 mb-lg-0" style={{width: 530}}>
                         <h1 className="font-weight-bold line-height-1 mb-3">
                             Forget Busy Work, <br/>
                             Start Next Vacation
@@ -41,7 +41,7 @@ export default function Hero(props) {
 
 
                         <div className="row" style={{marginTop: 50}}>
-                            <div className="col-auto" style={{marginRight: 35}}>
+                            <div className="col-auto mr-lg-5">
                                 <img width="36" 
                                     height="36"
                                     src={IconTraveler} 
@@ -54,7 +54,7 @@ export default function Hero(props) {
                                     </span>
                                 </h6>
                             </div>
-                            <div className="col-auto" style={{marginRight: 35   }}>
+                            <div className="col-auto mr-lg-5">
                                 <img width="36" 
                                     height="36"
                                     src={IconTreasure} 
@@ -67,7 +67,7 @@ export default function Hero(props) {
                                     </span>
                                 </h6>
                             </div>
-                            <div className="col-auto">
+                            <div className="col-auto mr-lg-5">
                                 <img width="36" 
                                     height="36"
                                     src={IconCities} 
@@ -84,10 +84,10 @@ export default function Hero(props) {
                     </div>
 
 
-                    <div className="col-6 pl-5">
-                        <div style={{width: 520, height:410}}>
-                            <img src={ImageHero} alt="Green Room" className="img-fluid position-absolute" style={{margin: '-30px 0 0 -30px', zIndex: 1}} />
-                            <img src={ImageHero_Frame} alt="Green Room Frame" className="img-fluid position-absolute" style={{margin: '30px -15px -15px 0' }} />
+                    <div className="col-12 col-lg-6 pl-lg-5">
+                        <div className="hero-image-placeholder">
+                            <img src={ImageHero} alt="Green Room" className="img-fluid position-relative" style={{ zIndex: 2}} />
+                            <img src={ImageHero_Frame} alt="Green Room Frame" className="img-fluid" style={{}} />
                         </div>
                     </div>
                 </div>

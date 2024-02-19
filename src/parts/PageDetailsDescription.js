@@ -6,15 +6,15 @@ export default function PageDetailsDescription({ data }) {
       <h4>About the place</h4>
       {ReactHtmlParser(data.description)}
       <div className="row" style={{ marginTop: 30 }}>
-        {data.features.map((feature, index) => {
+        {data.featureId.map((feature, index) => {
           return (
             <div
               key={`feature-${index}`}
-              className="col-3"
+              className="col-4 col-lg-3"
               style={{ marginBottom: 20 }}
             >
               <img
-                src={feature.imageUrl}
+                src={`${process.env.REACT_APP_HOST}/${feature.imageUrl}`}
                 alt={feature.name}
                 className="d-block mb-2"
                 width="38"

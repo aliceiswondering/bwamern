@@ -3,19 +3,15 @@ import Fade from "react-reveal/Fade";
 import Button from "elements/Button";
 export default function Categories({ data }) {
   return data.map((category, index1) => {
+    if (!category.itemId || category.itemId.length === 0) return null;
+
     return (
       <section className="container" key={`category-${index1}`}>
         <Fade bottom>
           <h4 className="mb-3 font-wieght-medium">{category.name}</h4>
           <div className="container-grid">
-            {category.items.length === 0 ? (
-              <div className="row">
-                <div className="col-aut align-items-center">
-                  There is no destination at this category.
-                </div>
-              </div>
-            ) : (
-              category.items.map((item, index2) => {
+            {category.itemId.length > 0 && (
+              category.itemId.map((item, index2) => {
                 return (
                   <div
                     className="item column-3 row-1"
@@ -31,8 +27,8 @@ export default function Categories({ data }) {
                         )}
                         <figure className="img-wrapper" style={{ height: 180 }}>
                           <img
-                            src={item.imageUrl}
-                            alt={item.name}
+                            src={item.imageId[0] ? `${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}` : ""}
+                            alt={item.title}
                             className="img-cover"
                           />
                         </figure>
@@ -43,7 +39,7 @@ export default function Categories({ data }) {
                             href={`/properties/${item._id}`}
                             className="stretched-link d-blok text-gray-800"
                           >
-                            <h5 className="h4">{item.name}</h5>
+                            <h5 className="h4">{item.title}</h5>
                           </Button>
                           <span className="text-gray-500">
                             {item.city}, {item.country}

@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+
+
 import propTypes from "prop-types";
 
 import Button from "elements/Button";
 import InputNumber from "elements/Form/InputNumber";
 import InputDate from "elements/Form/InputDate";
 
-export default class BookingForm extends Component {
+import ButtonSubmitBooking from 'elements/ButtonSubmitBooking'
+
+class BookingForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -63,6 +67,9 @@ export default class BookingForm extends Component {
       });
     }
   }
+
+  
+
   render() {
     const { data } = this.state;
     const { itemDetails, startBooking } = this.props;
@@ -103,9 +110,8 @@ export default class BookingForm extends Component {
           </span>
         </h6>
 
-        <Button className="btn" hasShadow isPrimary isBlock onClick={startBooking}>
-            Continue Book
-        </Button>
+        <ButtonSubmitBooking data={data} itemDetails={itemDetails} />
+        
       </div>
     );
   }
@@ -115,3 +121,5 @@ BookingForm.propTypes = {
   itemDetails: propTypes.object,
   startBooking: propTypes.func,
 };
+
+export default BookingForm;

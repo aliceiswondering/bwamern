@@ -1,7 +1,15 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 
-export default function FeaturedImage({ data }) {
+import {useSelector} from 'react-redux'
+import { useParams } from 'react-router-dom'
+
+export default function FeaturedImage() {
+
+  const page = useSelector((state) => state.page);
+  const { id } = useParams();
+
+  const data = page?.[id]?.imageId || [];
   return (
     <section className="container">
       <div className="container-grid sm">
@@ -17,7 +25,7 @@ export default function FeaturedImage({ data }) {
               <Fade bottom delay={300 * index}>
                 <div className="card h-100">
                   <figure className="img-wrapper">
-                    <img className="img-cover" src={item.url} alt={item._id}  />
+                    <img className="img-cover" src={`${process.env.REACT_APP_HOST}/${item.imageUrl}`} alt={item._id}  />
                   </figure>
                 </div>
               </Fade>
