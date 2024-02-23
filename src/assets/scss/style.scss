@@ -63,7 +63,9 @@
       grid-row-end: span 1;
     }
   }
-
+  .testimonial-hero {
+    margin: 30px 0 0 0;
+  }
   .testimonial-hero,
   .testimonial-hero img {
     width: 100%;
@@ -92,11 +94,16 @@
     height: 410px;
   }
 
+  .testimonial-hero {
+    margin: 30px 0 0 30px;
+  }
+
   .testimonial-hero,
   .testimonial-hero img {
     width: 365px;
     height: 500px;
   }
+  
   .testimonial-hero img:nth-child(2) {
     top: -30px;
     left: -30px;
