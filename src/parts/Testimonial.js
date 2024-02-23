@@ -9,7 +9,7 @@ export default function Testimonial({ data }) {
     <Fade bottom>
       <section className="container">
         <div className="row align-items-center">
-          <div className="col-12 col-lg-auto mb-4" >
+          <div className="col-12 col-lg-auto mb-4 " >
             <div
               className="testimonial-hero"
               style={{ margin: `30px 0 0 30px` }}

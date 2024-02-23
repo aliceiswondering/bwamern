@@ -97,9 +97,21 @@
     width: 365px;
     height: 500px;
   }
+  .testimonial-hero img:nth-child(2) {
+    top: -30px;
+    left: -30px;
+    z-index: 1;
+  }
 
   .card-booking {
     padding: 60px 80px;
+  }
+
+  .hero-image-placeholder img:nth-child(2) {
+    z-index: 1;
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
   }
 }
 
